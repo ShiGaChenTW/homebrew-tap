@@ -1,21 +1,21 @@
 # homebrew-tap
 
-Homebrew tap for [txtnimal](https://github.com/ShiGaChenTW/txtnimal) — a minimal, keyboard-first plain-text todo app for macOS.
+Homebrew tap for my own macOS tools.
 
-## Install
+| | Install |
+|---|---|
+| [ghostty-config-studio](https://github.com/ShiGaChenTW/ghostty_config_studio) — terminal workbench for Ghostty themes and config | `brew install shigachentw/tap/ghostty-config-studio` |
+| [txtnimal](https://github.com/ShiGaChenTW/txtnimal) — minimal, keyboard-first plain-text todo app | `brew install --cask shigachentw/tap/txtnimal` |
 
-```sh
-brew install --cask shigachentw/tap/txtnimal
-```
-
-Or tap first, then install:
+Or tap once, then install by name:
 
 ```sh
 brew tap shigachentw/tap
+brew install ghostty-config-studio
 brew install --cask txtnimal
 ```
 
-## First launch
+## txtnimal — first launch
 
 txtnimal v0.1.0 is an unsigned build (no Developer ID, not notarized by Apple). On first launch macOS Gatekeeper will block it. To open it:
 
@@ -28,6 +28,9 @@ Or Control-click `txtnimal.app` in Finder and choose **Open**.
 ## Update / uninstall
 
 ```sh
+brew upgrade ghostty-config-studio
+brew uninstall ghostty-config-studio
+
 brew upgrade --cask txtnimal
 brew uninstall --cask txtnimal
 ```
