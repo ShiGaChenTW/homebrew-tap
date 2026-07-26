@@ -1,8 +1,8 @@
 class GhosttyConfigStudio < Formula
   desc "Terminal workbench for Ghostty: browse themes, build config files field by field"
   homepage "https://github.com/ShiGaChenTW/ghostty_config_studio"
-  url "https://github.com/ShiGaChenTW/ghostty_config_studio/archive/refs/tags/v0.1.10.tar.gz"
-  sha256 "6aceda0a85b13dfbce69ed6d999175d0c8347f2f493151d68a23e85566a75533"
+  url "https://github.com/ShiGaChenTW/ghostty_config_studio/archive/refs/tags/v0.1.0.tar.gz"
+  sha256 "REPLACE_WITH_RELEASE_SHA256"
   license "MIT"
   head "https://github.com/ShiGaChenTW/ghostty_config_studio.git", branch: "main"
 
@@ -21,7 +21,13 @@ class GhosttyConfigStudio < Formula
 
   def install
     cd "tui" do
-      system "go", "build", *std_go_args(output: libexec/"ghostty-tui")
+      # The reported version is injected from this formula's own `version`,
+      # which Homebrew parses out of the tagged url above. It used to be a
+      # hand-edited constant in main.go, and v0.1.9 shipped a binary still
+      # calling itself 0.1.8 — the test block below compares the two, so the
+      # only way to keep them honest is to have one source for both.
+      system "go", "build", *std_go_args(output: libexec/"ghostty-tui",
+                                         ldflags: "-X main.version=#{version}")
     end
     bin.write_exec_script libexec/"ghostty-tui"
 
