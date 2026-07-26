@@ -2,7 +2,7 @@ class GhosttyConfigStudio < Formula
   desc "Terminal workbench for Ghostty: browse themes, build config files field by field"
   homepage "https://github.com/ShiGaChenTW/ghostty_config_studio"
   url "https://github.com/ShiGaChenTW/ghostty_config_studio/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "b32a094065c7a97699a6b5b5c70d74c4de2fa02be0b81ecb8c45513d68e90958"
+  sha256 "b4a184f51587edcee5a1aacc22403b54ad9fc8ec7357deceab75cd6b3377c7f9"
   license "MIT"
   head "https://github.com/ShiGaChenTW/ghostty_config_studio.git", branch: "main"
 
