@@ -14,16 +14,16 @@
 class SysappTui < Formula
   desc "macOS system package scanner and TUI dashboard"
   homepage "https://github.com/ShiGaChenTW/sysapp-tui"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/ShiGaChenTW/sysapp-tui/releases/download/v#{version}/sysapp-tui-v#{version}-aarch64-apple-darwin.tar.gz"
-      sha256 "6d8eab96b23435d2013b6d15f5453ec5378ba364684c60b70196fc2f97ffe811"
+      sha256 "d81ccd7380263deee4a4c419cf1091d8381b6b3487db55dd22a3dfdc46f07df9"
     else
       url "https://github.com/ShiGaChenTW/sysapp-tui/releases/download/v#{version}/sysapp-tui-v#{version}-x86_64-apple-darwin.tar.gz"
-      sha256 "ac12125c328bad0085ae1d5a8212226c063e9f020041fc6f0101f77591535827"
+      sha256 "27ab6a92e0a7824d212c184fb2e3b9e9b10ec3d8c15d5e5936ad933e67f8ef04"
     end
   end
 
