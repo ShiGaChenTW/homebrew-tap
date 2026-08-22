@@ -1,6 +1,6 @@
 cask "anchorline" do
-  version "1.1.0"
-  sha256 "95d3e5afca8d444f38ed679b931a509e938c3a80f32a7bdb209e93c37b687070"
+  version "1.2.0"
+  sha256 "ee6b83489a1804367827f17b85b3f061a1c9cad3257c14b6f49542708fc44b2d"
 
   url "https://github.com/ShiGaChenTW/anchorline/releases/download/v#{version}/Anchorline_#{version}_universal.dmg"
   name "Anchorline"
